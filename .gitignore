@@ -21,4 +21,8 @@
 *.i*86
 *.x86_64
 *.hex
-default
+ballistics_demo
+
+# Vim
+*.swp
+*.swo

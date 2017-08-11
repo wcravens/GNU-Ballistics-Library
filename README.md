@@ -5,5 +5,8 @@ Original Source: http://sourceforge.net/projects/ballisticslib/
 
 To Build:
 
-    // Just run make with trivial Makefile
     ; make
+
+To Build demo from example.c
+
+    ; make ballistics_demo
