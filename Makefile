@@ -1,4 +1,5 @@
 LIB = libballistics.a
+EXE = ballistics_demo
 
 SRC_DIR = src
 OBJ_DIR = obj
@@ -21,8 +22,8 @@ $(LIB): $(OBJ)
 $(OBJ_DIR)/%.o: $(SRC_DIR)/_%.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-ballistics_demo: $(LIB) example.c
+$(EXE): $(LIB) example.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ example.c $(LDFLAGS) -lballistics
 
 clean:
-	$(RM) $(OBJ) $(LIB)
+	$(RM) $(OBJ) $(LIB) $(EXE)
