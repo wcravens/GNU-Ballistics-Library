@@ -21,7 +21,7 @@ $(LIB): $(OBJ)
 $(OBJ_DIR)/%.o: $(SRC_DIR)/_%.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-ballistics_demo: $(LIB)
+ballistics_demo: $(LIB) example.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ example.c $(LDFLAGS) -lballistics
 
 clean:
